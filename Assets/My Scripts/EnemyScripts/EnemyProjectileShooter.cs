@@ -12,11 +12,9 @@ public class EnemyProjectileShooter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Mouse1)) 
-			fire();
 	}
 	
-	void fire() {
+	void Fire() {
 		GameObject projectile = Instantiate(prefab) as GameObject;
 		projectile.transform.position = transform.position + transform.up;
 		
@@ -26,4 +24,6 @@ public class EnemyProjectileShooter : MonoBehaviour {
 		Destroy(projectile, 3f);
 	
 	}
+	
+	
 }
